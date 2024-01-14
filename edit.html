@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/edit.css' %}" rel="stylesheet">
+</head>
+<body> 
+
+    <h1 align="center">Welcome to javajunction</h1>
+    <div class="edit-container">
+    <form class="edit-form" method="POST" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% for x in data %}
+
+
+        <label>Name:</label>
+        <input type="text" name="uname" value="{{x.name}}" placeholder="Enter product Name">
+        <label>Price:</label>
+        <input type="number" name="uprice" value="{{x.price}}" placeholder="Enter price">
+        <label>Details:</label>
+        <input type="text" name="udetail" value="{{x.details}}" placeholder="Enter details">
+        <label>category:</label>
+        <input type="text" name="ucategory" value="{{x.category}}" placeholder="Enter category">
+        <label>Image</label>
+        <input type="file" name="uimage" accept="image/*" value="{{ x.image.url }}">
+        <input type="submit" value="submit">
+           
+           {% endfor %}
+    </form>
+    </div>
+      
+    <script src="{% static 'js\bootstrap.min.js' %}"> </script>
+
+    <script src="{% static 'js\popper.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

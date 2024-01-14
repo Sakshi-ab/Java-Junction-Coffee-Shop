@@ -1,0 +1,36 @@
+<!-- order_status.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+</head>
+<body>
+    <h1>Order Status</h1>
+
+    <!-- Display order status information here -->
+
+    <div id="order-message"></div>
+    
+    <script>
+        // You can use JavaScript to update the order status information dynamically
+        function acceptOrder(button) {
+            var orderId = button.getAttribute('data-order-id');
+           
+            // Display message to the user
+
+        document.getElementById('order-message').innerText = "Order accepted!";
+        }
+        
+        function completeOrder(button) {
+            var orderId = button.getAttribute('data-order-id');
+     
+            
+
+            // Display message to the user
+            document.getElementById('order-message').innerText = "Order completed!";
+        }
+    </script>
+</body>
+</html>

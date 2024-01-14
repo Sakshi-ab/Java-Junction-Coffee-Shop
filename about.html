@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--custom css file link-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+     <link href="{% static '\images' %}"
+     <style>
+        .content {
+            flex: 1 1 45rem;
+            padding: 2rem;
+        }
+    
+        .content h3 {
+            font-size: 3rem;
+            color: #fff;
+        }
+    
+        .content p {
+            font-size: 1.6rem;
+            color: #ccc;
+            padding: 1rem 0;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+  <!--header section starts-->
+        <header class="header">
+            <a href="#" class="logo">
+                <img src="{% static 'images/logo3.png' %}" alt="">
+
+            </a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#products">Products</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+                <a href="#blogs">Blogs</a>
+
+            </nav>
+
+            </header>
+
+            <div class="content">
+                <h3>what makes your coffee special?</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur 
+                    adipisicing elit. Enim beatae hic illum autem saepe, quia reprehenderit doloribus, rem vel provident eum quos 
+                    maxime recusandae odio eos excepturi
+                     accusantium atque! Earum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia perspiciatis laborum ab, 
+                    incidunt provident recusandae.Inventore beatae dolor quo libero alias voluptatibus, vitae nobis fugiat quos, placeat deleniti incidunt.</p>
+               
+
+            </div>
+
+</body>
+</html>

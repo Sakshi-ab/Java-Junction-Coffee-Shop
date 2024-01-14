@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/login.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 420px;
+    height: 380px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+}
+
+h2 {
+    color: burlywood;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background: transparent; /* Make the input boxes transparent */
+    border: none; /* Remove the border */
+    border-bottom: 1px solid #fff; /* Add a bottom border for styling */
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: rgb(149, 125, 97);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    background: rgb(83, 80, 77);
+}
+
+a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}

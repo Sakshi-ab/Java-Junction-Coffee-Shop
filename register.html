@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/register_style.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center">Registration Form</h1>
+    <a style="
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 50px;
+    " href="{% url 'index' %}">GO to Home</a>
+    <div class="register-container">
+    <form class="register-form" method="POST" action="">
+        {% csrf_token %}
+        <h4 align="center">{{msg}}</h4>
+             
+            <label>Name:</label>
+            <input type="text" name="uname" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" name="uemail"  placeholder="Enter your email">
+
+            <label>Password:</label>
+            <input type="password" name="upassword" placeholder="Enter your password">
+
+            <label>confirm Password:</label>
+            <input type="password"name="uconfirmpassword" placeholder="ReEnter your password">
+
+            <input type="submit" value="submit">
+
+        
+    </form>
+</div>
+
+    <script src="{% static 'js\bootstrap.min.js' %}"> </script>
+
+    <script src="{% static 'js\popper.js' %}"></script>
+</body>
+</html>

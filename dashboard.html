@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>Welcome to javajunction</h1>
+    
+    <table border="1" align="center">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>detail</th>
+                <th>category</th>
+                <th>images</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+                {% for x in data %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.price}}</td>
+                <td>{{x.details}}</td>
+                <td>{{x.category}}</td>
+                <td><img src="{{x.image.url}}" style="height: 60px;"></td>
+                
+                <td><a href="/edit/{{x.id}}">Edit</a></td>
+                <td><a href="/delete/{{x.id}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+    </table>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="\create"><button>Insert</button></a>
+        <a href="{% url 'index' %}"><button>Home</button></a>
+    </div>
+    <script src="{% static 'js\bootstrap.min.js' %}"> </script>
+
+    <script src="{% static 'js\popper.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.edit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin-top: 20px;
+}
+
+.edit-form {
+    width: 450px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: rgb(149, 125, 97);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    background: rgb(83, 80, 77);
+}
+
+/* Additional styling for better readability of input fields */
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link href="{% static 'css/view_order.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>Order List</h1>
+    <a style="
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 50px;
+    " href="{% url 'index' %}">GO to Home</a>
+
+    <table border="1">
+        <tr>
+            <th>Order ID</th>
+            <th>User</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Action</th>
+           
+
+
+        </tr>
+        {% for order in orders %}
+            <tr>
+                
+                <td>{{ order.id }}</td>
+                <td>{{ order.user.username }}</td>
+                <td>{{ order.product.name }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.total_price }}</td>
+                <td>
+                    <button data-order-id="{{ order.id }}" onclick="acceptOrder(this)">Accept</button>
+                    <button data-order-id="{{ order.id }}" onclick="completeOrder(this)">Complete</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <script>
+        function acceptOrder(button) {
+            var orderId = button.getAttribute('data-order-id');
+            alert("Order accepted for ID: " + orderId);
+            // Your logic for accepting an order
+
+            // Display message to the user
+            document.getElementById('order-message').innerText = "Order accepted!";
+        }
+
+        function completeOrder(button) {
+            var orderId = button.getAttribute('data-order-id');
+            alert("Order completed for ID: " + orderId);
+            // Your logic for completing an order
+
+            // Display message to the user
+            document.getElementById('order-message').innerText = "Order completed!";
+        }
+    </script>
+
+    <div id="order-message"></div>
+</body>
+</html>
